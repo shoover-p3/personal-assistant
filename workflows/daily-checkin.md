@@ -15,6 +15,22 @@ Before asking questions, review:
 If there are open questions from previous sessions, bring them up:
 - "Last time you mentioned [X]. What happened with that?"
 
+## Process Slack Captures
+
+Check `data/captures.json` for unprocessed captures from Slack:
+
+If there are captures:
+1. List them: "I found [N] captures from Slack: [list them]"
+2. For each capture:
+   - **If TASK**: Add to `data/tasks/tasks.json`
+   - **If OUTCOME**: Add to `data/outcomes/outcomes.json`
+   - **If NOTE**: Add to `context/open-questions.md` or appropriate context file
+   - **If PROJECT**: Discuss with user about creating a project
+3. Mark captures as processed (set `processed: true`)
+4. Consider: Should captures.json be cleaned periodically? Or keep processed ones for history?
+
+If no captures: Continue to core questions.
+
 ## Core Questions
 
 Ask these in a conversational way (not like a form):

@@ -1,0 +1,7 @@
+name = "personal-assistant-bot"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables (secrets) - set these via wrangler CLI
+# wrangler secret put SLACK_BOT_TOKEN
+# wrangler secret put GITHUB_TOKEN

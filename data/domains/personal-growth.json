@@ -1,0 +1,26 @@
+{
+  "name": "Personal Growth",
+  "description": "Ongoing habits, frameworks, mindset work, and self-improvement practices.",
+  "created": "2026-01-20",
+  "active_projects": [],
+  "habits": {
+    "protein_tracking": {
+      "description": "Track estimated daily protein intake",
+      "frequency": "daily",
+      "created": "2026-01-20"
+    },
+    "spanish_learning": {
+      "description": "Spend at least 15 minutes per day on Spanish learning app",
+      "target": "15 minutes",
+      "frequency": "daily",
+      "created": "2026-01-20"
+    },
+    "reading": {
+      "description": "Spend at least 15 minutes per day reading",
+      "target": "15 minutes",
+      "frequency": "daily",
+      "created": "2026-01-20"
+    }
+  },
+  "notes": "Focus on building positive habits and applying personal development frameworks."
+}

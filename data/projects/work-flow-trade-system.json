@@ -1,0 +1,16 @@
+{
+  "id": "work-flow-trade-system",
+  "domain": "Work",
+  "title": "Flow Trade Trend Following & Month End Trading System",
+  "purpose": "Design a systematic trading approach combining flow-driven trend following with month-end effects",
+  "status": "active",
+  "created": "2026-01-20",
+  "actions": [
+    "Supply background data and constraints",
+    "Define universe and signals",
+    "Specify timing logic",
+    "Define success criteria"
+  ],
+  "outcomes": [],
+  "notes": "Highest-importance project. Large and complex - will need its own structure eventually. Ongoing."
+}

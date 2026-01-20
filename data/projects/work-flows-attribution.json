@@ -1,0 +1,18 @@
+{
+  "id": "work-flows-attribution",
+  "domain": "Work",
+  "title": "Flows Trade Return Attribution (MC Data)",
+  "purpose": "Attribute realized PnL across beginning-of-month, auction-day, and end-of-month periods to identify timing patterns",
+  "status": "active",
+  "created": "2026-01-20",
+  "actions": [
+    "Get final analysis completed from MC (meta analysis done)"
+  ],
+  "outcomes": [
+    {
+      "date": "2026-01-20",
+      "content": "Meta analysis completed, now need final analysis"
+    }
+  ],
+  "notes": "Diagnostic project focused on timing efficacy. Mostly done, final step remaining."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "work-claude-code-phase3",
+  "domain": "Work",
+  "title": "Claude Code - Phase 3 Use Cases & Documentation",
+  "purpose": "Document what's being built with Claude Code and identify potential Phase 3 use cases",
+  "status": "active",
+  "created": "2026-01-20",
+  "actions": [
+    "Document current CC projects (personal assistant, Jira replacement)",
+    "Identify potential Phase 3 use cases",
+    "Assess security/IP considerations"
+  ],
+  "outcomes": [
+    {
+      "date": "2026-01-20",
+      "content": "Started using Claude Code - building personal assistant system and exploring Jira replacement"
+    }
+  ],
+  "notes": "Moved from 'not yet active' to active given CC work already underway. Needs structure."
+}

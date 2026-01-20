@@ -1,0 +1,17 @@
+{
+  "id": "work-program-composer",
+  "domain": "Work",
+  "title": "Program Composer (Python)",
+  "purpose": "Replicate two Composer-website portfolios locally to learn portfolio construction mechanics and gain execution independence",
+  "status": "deferred",
+  "created": "2026-01-20",
+  "actions": [
+    "Export Composer portfolio holdings and rules",
+    "Reverse-engineer portfolio logic",
+    "Implement portfolio logic in Python",
+    "Reconcile Python vs website outputs",
+    "Connect to internal execution API"
+  ],
+  "outcomes": [],
+  "notes": "Learning bridge. Deferred pending Work Inventory."
+}

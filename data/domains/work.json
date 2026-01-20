@@ -1,0 +1,16 @@
+{
+  "name": "Work",
+  "description": "Project-oriented work efforts. Bounded initiatives with clear structure.",
+  "created": "2026-01-20",
+  "active_projects": [
+    "work-jira-replacement",
+    "work-flows-attribution",
+    "work-flow-trade-system",
+    "work-claude-code-phase3",
+    "work-psof-pitch"
+  ],
+  "deferred_projects": [
+    "work-program-composer"
+  ],
+  "notes": "Tends to be more project-focused than task-focused."
+}

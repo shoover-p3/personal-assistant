@@ -67,15 +67,17 @@ Context lives in `context/`:
 
 **Before reading any data:**
 ```bash
-cd C:\Users\SHoover\personal-assistant && git pull
+git pull
 ```
 
 **After modifying any data:**
 ```bash
-cd C:\Users\SHoover\personal-assistant && git add . && git commit -m "descriptive message" && git push
+git add . && git commit -m "descriptive message" && git push
 ```
 
 This ensures synchronization between the user's laptop and work computer. ALWAYS pull before reading. ALWAYS commit and push after writing.
+
+Note: The user should already be in the personal-assistant directory when interacting with this system.
 
 ## Daily Workflow
 

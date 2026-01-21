@@ -1,3 +1,19 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "task_001",
+      "domain": "Personal",
+      "content": "Draft and send MyChart email to Northwestern covering: Creatine, Urolithin A, attending physician for biopsy, HSP specialist (open to additional topics)",
+      "created": "2026-01-20",
+      "status": "open"
+    },
+    {
+      "id": "task_002",
+      "domain": "Personal",
+      "content": "PT appointment for knee at noon",
+      "created": "2026-01-20",
+      "due": "2026-01-21",
+      "status": "open"
+    }
+  ]
 }

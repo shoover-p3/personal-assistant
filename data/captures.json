@@ -13,6 +13,13 @@
       "domain": null,
       "content": "Personal to do: prepare for Schwab meeting",
       "processed": true
+    },
+    {
+      "timestamp": "2026-01-23T23:59:43.125Z",
+      "type": "raw",
+      "domain": null,
+      "content": "Personal to do therapy\n<https://chatgpt.com/s/t_69740b49b9f081919af7e6c3563a63e9|https://chatgpt.com/s/t_69740b49b9f081919af7e6c3563a63e9>",
+      "processed": false
     }
   ]
 }

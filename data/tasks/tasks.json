@@ -13,6 +13,29 @@
       "content": "PT appointment for knee at noon",
       "created": "2026-01-20",
       "due": "2026-01-21",
+      "status": "completed",
+      "completed": "2026-01-21"
+    },
+    {
+      "id": "task_003",
+      "domain": "Personal",
+      "content": "PT appointment for knee at 11am",
+      "created": "2026-01-22",
+      "due": "2026-01-29",
+      "status": "open"
+    },
+    {
+      "id": "task_004",
+      "domain": "Personal",
+      "content": "Send MyChart email to GP at Northwestern to order echo for heart",
+      "created": "2026-01-22",
+      "status": "open"
+    },
+    {
+      "id": "task_005",
+      "domain": "Work",
+      "content": "Consider changing the equity trades to market orders for PSOF",
+      "created": "2026-01-22",
       "status": "open"
     }
   ]

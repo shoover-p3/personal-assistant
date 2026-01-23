@@ -3,10 +3,10 @@
   "domain": "Work",
   "title": "Jira Replacement - Custom PM Tool",
   "purpose": "Build a light project management system for Phase 3 using Claude Code, inspired by Trello, to replace Jira",
-  "status": "active",
+  "status": "waiting",
   "created": "2026-01-20",
   "actions": [
-    "Hand off to Han for hosting",
+    "Wait for Han to host",
     "Additional work after Han hosts (TBD)"
   ],
   "outcomes": [
@@ -17,7 +17,11 @@
     {
       "date": "2026-01-20",
       "content": "Built initial version ready to hand off to Han for hosting"
+    },
+    {
+      "date": "2026-01-22",
+      "content": "Handed off to Han for hosting"
     }
   ],
-  "notes": "Decision made to build custom solution. Now needs planning for implementation approach."
+  "notes": "Waiting on Han to host. Further work TBD after hosting complete."
 }

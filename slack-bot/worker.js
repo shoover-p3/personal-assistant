@@ -27,33 +27,43 @@ export default {
       const message = body.event.text;
       const userId = body.event.user;
 
-      // Parse message format: "TYPE Domain: content"
+      // Parse message format: "TYPE Domain: content" (optional structured format)
       // Examples: "TASK Work: Schedule meeting" or "OUTCOME Personal Growth: Read for 30 min"
       const match = message.match(/^(TASK|OUTCOME|NOTE|PROJECT)\s+([^:]+):\s*(.+)$/i);
 
-      if (!match) {
-        // Send help message if format is wrong
-        await sendSlackMessage(env.SLACK_BOT_TOKEN, body.event.channel,
-          `Format not recognized. Use:\nTASK Domain: content\nOUTCOME Domain: content\nNOTE Domain: content\nPROJECT Domain: content\n\nExample: TASK Work: Schedule meeting with Eric`);
-        return new Response('OK', { status: 200 });
+      let capture;
+
+      if (match) {
+        // Structured format
+        const [, type, domain, content] = match;
+        capture = {
+          timestamp: new Date().toISOString(),
+          type: type.toLowerCase(),
+          domain: domain.trim(),
+          content: content.trim(),
+          processed: false
+        };
+      } else {
+        // Unstructured format - capture raw message for processing during check-in
+        capture = {
+          timestamp: new Date().toISOString(),
+          type: "raw",
+          domain: null,
+          content: message.trim(),
+          processed: false
+        };
       }
-
-      const [, type, domain, content] = match;
-
-      // Create capture object
-      const capture = {
-        timestamp: new Date().toISOString(),
-        type: type.toLowerCase(),
-        domain: domain.trim(),
-        content: content.trim(),
-        processed: false
-      };
 
       // Write to GitHub
       try {
         await appendToGitHubCaptures(env.GITHUB_TOKEN, capture);
-        await sendSlackMessage(env.SLACK_BOT_TOKEN, body.event.channel,
-          `✓ Captured: ${type} in ${domain}`);
+        if (capture.type === "raw") {
+          await sendSlackMessage(env.SLACK_BOT_TOKEN, body.event.channel,
+            `✓ Captured for review during check-in`);
+        } else {
+          await sendSlackMessage(env.SLACK_BOT_TOKEN, body.event.channel,
+            `✓ Captured: ${capture.type} in ${capture.domain}`);
+        }
       } catch (error) {
         console.error('Error writing to GitHub:', error);
         await sendSlackMessage(env.SLACK_BOT_TOKEN, body.event.channel,

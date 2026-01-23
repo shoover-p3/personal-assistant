@@ -22,6 +22,9 @@ Check `data/captures.json` for unprocessed captures from Slack:
 If there are captures:
 1. List them: "I found [N] captures from Slack: [list them]"
 2. For each capture:
+   - **If type is "raw"** (unstructured message): Review with user to determine classification
+     - Ask: "This looks like a [task/note/outcome]. Should I add it to [tasks/open-questions/outcomes]?"
+     - Clarify domain if needed (Work, Personal, Personal Growth)
    - **If TASK**: Add to `data/tasks/tasks.json`
    - **If OUTCOME**: Add to `data/outcomes/outcomes.json`
    - **If NOTE**: Add to `context/open-questions.md` or appropriate context file

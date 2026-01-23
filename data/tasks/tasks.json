@@ -37,6 +37,35 @@
       "content": "Consider changing the equity trades to market orders for PSOF",
       "created": "2026-01-22",
       "status": "open"
+    },
+    {
+      "id": "task_006",
+      "domain": "Personal",
+      "content": "Prepare for Schwab meeting",
+      "created": "2026-01-23",
+      "status": "open"
+    },
+    {
+      "id": "task_007",
+      "domain": "Work",
+      "content": "Fill out Project Tracker",
+      "created": "2026-01-23",
+      "status": "open"
+    },
+    {
+      "id": "task_008",
+      "domain": "Personal",
+      "content": "Check KOLD ETF",
+      "created": "2026-01-23",
+      "due": "2026-01-24",
+      "status": "open"
+    },
+    {
+      "id": "task_009",
+      "domain": "Work",
+      "content": "Read Flow Trade System current documentation (printed PDFs)",
+      "created": "2026-01-23",
+      "status": "open"
     }
   ]
 }

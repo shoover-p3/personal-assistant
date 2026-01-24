@@ -27,6 +27,13 @@
       "domain": null,
       "content": "Work to do. Tell Ethan about my conversation with Daniel Himmelfarb",
       "processed": false
+    },
+    {
+      "timestamp": "2026-01-24T04:35:25.800Z",
+      "type": "raw",
+      "domain": null,
+      "content": "Work to do. Submit brokerage statements",
+      "processed": false
     }
   ]
 }

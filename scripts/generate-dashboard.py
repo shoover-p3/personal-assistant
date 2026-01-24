@@ -141,12 +141,38 @@ def generate_daily_brief(tasks, projects, captures):
     return " ".join(insights)
 
 
+def sort_tasks_intelligently(tasks):
+    """Sort tasks by priority: due dates first, then project-linked, then others"""
+    def task_sort_key(task):
+        # Priority 1: Tasks with due dates (earliest first)
+        if task.get('due'):
+            days_left = days_until(task['due'])
+            if days_left is not None:
+                # Overdue tasks get highest priority (negative numbers = earlier)
+                return (0, days_left)
+
+        # Priority 2: Tasks linked to projects
+        if task.get('project_id'):
+            return (1, 0)
+
+        # Priority 3: Everything else (maintain original order via creation date)
+        created = task.get('created', '9999-12-31')
+        return (2, created)
+
+    return sorted(tasks, key=task_sort_key)
+
+
 def group_tasks_by_domain(tasks):
-    """Group tasks by domain"""
+    """Group tasks by domain and sort intelligently within each domain"""
     grouped = defaultdict(list)
     for task in tasks:
         domain = task.get('domain', 'Unknown')
         grouped[domain].append(task)
+
+    # Sort tasks within each domain
+    for domain in grouped:
+        grouped[domain] = sort_tasks_intelligently(grouped[domain])
+
     return grouped
 
 

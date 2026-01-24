@@ -109,6 +109,27 @@
       "content": "Set up Substack RSS monitor: provide list of Substack names and high-priority keywords for daily digest",
       "created": "2026-01-24",
       "status": "open"
+    },
+    {
+      "id": "task_016",
+      "domain": "Work",
+      "content": "Purchase Logitech MX Anywhere 3S mouse ($85) - https://www.logitech.com/en-us/shop/p/mx-anywhere-3s or Amazon",
+      "created": "2026-01-24",
+      "status": "open"
+    },
+    {
+      "id": "task_017",
+      "domain": "Work",
+      "content": "Purchase Dragon Professional Individual 16 ($300) - https://www.nuance.com/dragon.html or https://speechcomputing.com/product/dragon-professional-16/",
+      "created": "2026-01-24",
+      "status": "open"
+    },
+    {
+      "id": "task_018",
+      "domain": "Work",
+      "content": "Purchase Logitech Zone Vibe 100 headset ($100-150) - https://www.amazon.com/Logitech-Lightweight-Headphones-Microphone-Multipoint/dp/B09NBVS84T or Best Buy",
+      "created": "2026-01-24",
+      "status": "open"
     }
   ]
 }

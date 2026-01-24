@@ -1,0 +1,39 @@
+name: Update Dashboard
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'data/tasks/**'
+      - 'data/projects/**'
+      - 'context/**'
+      - 'data/captures.json'
+      - 'scripts/generate-dashboard.py'
+
+jobs:
+  build-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate dashboard
+        run: python scripts/generate-dashboard.py
+
+      - name: Commit dashboard
+        run: |
+          git config user.name "Dashboard Bot"
+          git config user.email "dashboard@bot.local"
+          git add dashboard/index.html
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update dashboard [automated]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

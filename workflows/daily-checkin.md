@@ -2,71 +2,109 @@
 
 This workflow guides the daily conversation with the user.
 
-## Opening
+## Session Start (Silent Operations)
 
-"Good [morning/afternoon/evening]. What's on your mind today?"
+1. **Git Pull** (MANDATORY FIRST ACTION):
+   ```bash
+   git pull origin main
+   ```
 
-## Context Review
+2. **Load Context:**
+   - Read `context/current-focus.md`
+   - Read `context/open-questions.md`
+   - Read last 3 git commits
+   - Scan `data/tasks/tasks.json` for open tasks
+   - Check `data/captures.json` for unprocessed items
+   - Scan `data/projects/` for active projects
+   - Note time/day context
 
-Before asking questions, review:
-- `context/current-focus.md` - What was the user working on?
-- `context/open-questions.md` - Any unresolved items to follow up on?
+3. **Synthesize Insights:**
+   - What patterns do I notice?
+   - What needs attention?
+   - What's time-sensitive?
+   - Any commentary from 3-tier system or intuition?
 
-If there are open questions from previous sessions, bring them up:
-- "Last time you mentioned [X]. What happened with that?"
+## Opening with Summary Display
 
-## Process Slack Captures
+**Greeting:** "Good [morning/afternoon/evening]."
 
-Check `data/captures.json` for unprocessed captures from Slack:
+**Then present comprehensive summary:**
 
-If there are captures:
-1. List them: "I found [N] captures from Slack: [list them]"
-2. For each capture:
-   - **If type is "raw"** (unstructured message): Review with user to determine classification
-     - Ask: "This looks like a [task/note/outcome]. Should I add it to [tasks/open-questions/outcomes]?"
-     - Clarify domain if needed (Work, Personal, Personal Growth)
-   - **If TASK**: Add to `data/tasks/tasks.json`
-   - **If OUTCOME**: Add to `data/outcomes/outcomes.json`
-   - **If NOTE**: Add to `context/open-questions.md` or appropriate context file
-   - **If PROJECT**: Discuss with user about creating a project
-3. Mark captures as processed (set `processed: true`)
-4. Consider: Should captures.json be cleaned periodically? Or keep processed ones for history?
+### Projects
+- List all active projects with status
+- Note any without updates >7 days
 
-If no captures: Continue to core questions.
+### Tasks
+**Due in Next 5 Days:**
+- [List tasks with approaching due dates]
 
-## Core Questions
+**Open Tasks by Domain:**
+- **Work:** [count] tasks
+- **Personal:** [count] tasks
+- **Personal Growth:** [count] tasks
 
-Ask these in a conversational way (not like a form):
+### Slack Captures
+**Unprocessed:** [N] captures
 
-1. **What are you working on today?**
-   - Listen for: New projects? Continuing existing work? One-off tasks?
-   - Clarify: "Is this part of [existing project] or something new?"
+**Auto-Processing (with suggestions):**
+For each capture, present:
+"[Timestamp]: '[content]'"
+→ Suggested action: [Add as Work task / Add as Personal task / Log as outcome / Add to open questions]
 
-2. **Any decisions or conclusions recently?**
-   - Listen for: Outcomes to log
-   - Prompt: "Should we capture that as an outcome?"
+User can intervene to change classification or provide details. If no intervention, proceed with suggestion.
 
-3. **Anything blocking you or unclear?**
-   - Listen for: Open questions to track
-   - Add to `context/open-questions.md`
+### Commentary
+If I have observations, patterns, or intuition based on the 3-tier system:
+- "I notice you've mentioned [X] multiple times..."
+- "This relates to your [date] decision about..."
+- "Pattern: [observation]"
+- "Question: [something worth clarifying]"
 
-4. **What's your current focus?**
-   - Update `context/current-focus.md` with what matters today/this week
+## Process Captures
+
+Based on suggestions and user input:
+1. Execute appropriate action for each capture
+2. Mark all as `processed: true`
+3. Update relevant files
+
+## Core Conversation
+
+Natural dialogue, not interrogation:
+- "What's the priority today?"
+- Follow their lead
+- Ask one thoughtful question at a time
+- Recognize conversation mode (planning/reflection/problem-solving)
+
+Listen for:
+- New tasks or projects
+- Decisions or conclusions (outcomes)
+- Blockers or questions
+- Focus shifts
 
 ## Data Updates
 
-Based on the conversation:
-- Add new tasks to `data/tasks/tasks.json`
-- Create new projects in `data/projects/` if needed
-- Log outcomes to `data/outcomes/outcomes.json`
-- Update current focus and open questions
+Based on conversation:
+- Update `data/tasks/tasks.json`
+- Update `data/outcomes/outcomes.json`
+- Update `data/projects/[name].json`
+- Update `context/current-focus.md`
+- Update `context/open-questions.md`
 
-## Closing
+## Closing (MANDATORY)
 
-"Anything else you want to capture?"
-
-Then: commit and push all changes.
+1. "Anything else to capture?"
+2. **Git Commit and Push:**
+   ```bash
+   git add .
+   git commit -m "[Clear description]"
+   git push origin main
+   ```
+3. Confirm: "All synced."
 
 ## Tone
 
-Keep it conversational, not interrogative. This should feel like talking to a thinking partner, not filling out a form.
+- Conversational, not interrogative
+- Partnership language ("we", "let's")
+- Professional but warm
+- Share observations and intuition
+- Feel like talking to a thinking partner

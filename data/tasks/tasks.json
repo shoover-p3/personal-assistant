@@ -57,7 +57,7 @@
       "domain": "Personal",
       "content": "Check KOLD ETF",
       "created": "2026-01-23",
-      "due": "2026-01-24",
+      "due": "2026-01-27",
       "status": "open"
     },
     {
@@ -100,7 +100,8 @@
       "domain": "Personal",
       "content": "Create personal assistant mandate prompt",
       "created": "2026-01-24",
-      "status": "open"
+      "status": "completed",
+      "completed": "2026-01-24"
     }
   ]
 }

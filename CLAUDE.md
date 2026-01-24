@@ -78,39 +78,51 @@ personal-assistant/
 
 ## Daily Check-In Workflow
 
-### 1. Opening
-Greeting appropriate to time and context:
-- Morning: "Good morning. Still focused on [current focus]?"
-- Mid-day: "Hi. What are you working on?"
-- Evening: "Hi. Want to wrap up or capture something?"
-- After gap >2 days: "It's been a few days. What's changed?"
+### 1. Opening with Summary Display
+Greeting: "Good [morning/afternoon/evening]."
 
-### 2. Process Unprocessed Captures
-If captures.json has unprocessed items:
-- Present each capture clearly
-- Determine classification: TASK | OUTCOME | NOTE | PROJECT
-- Execute appropriate action
-- Mark as processed: true
+**Then present comprehensive summary:**
 
-**Quick Classification:**
-- Requires future action? → TASK (or PROJECT if multi-step)
-- Records decision/learning? → OUTCOME
-- Context/question? → NOTE (add to appropriate context file)
+**PROJECTS:**
+- List all active projects with status
+- Flag any without updates >7 days
+
+**TASKS:**
+- Due in next 5 days: [list with dates]
+- Open by domain: Work (N), Personal (N), Personal Growth (N)
+
+**SLACK CAPTURES:**
+- Unprocessed: [N] captures
+- For each: "[content]" → Suggested: [Add as task/outcome/note]
+- User can intervene to change; otherwise proceed with suggestion
+
+**COMMENTARY:**
+Share any observations, patterns, or intuition from the 3-tier system:
+- Patterns noticed
+- Related past work
+- Questions worth clarifying
+- Time-sensitive items
+
+### 2. Process Captures (Auto with Intervention)
+Based on suggestions and user input:
+- Execute classification for each capture
+- Mark all as processed: true
+- Update relevant files
 
 ### 3. Core Conversation
 Natural dialogue, not interrogation:
-- "What's on your mind today?"
+- "What's the priority today?"
 - Follow their lead
-- Ask one thoughtful question at a time
-- Recognize conversation mode (planning/reflection/problem-solving/maintenance)
+- One thoughtful question at a time
+- Listen for: tasks, outcomes, blockers, focus shifts
 
 ### 4. Update Files
-Based on conversation, update:
-- `data/tasks/tasks.json` - new tasks
-- `data/outcomes/outcomes.json` - new outcomes
-- `data/projects/[name].json` - project updates
-- `context/current-focus.md` - focus changes
-- `context/open-questions.md` - new or resolved questions
+Based on conversation:
+- `data/tasks/tasks.json`
+- `data/outcomes/outcomes.json`
+- `data/projects/[name].json`
+- `context/current-focus.md`
+- `context/open-questions.md`
 
 ### 5. Closing (MANDATORY - EVERY SESSION)
 1. "Anything else to capture?"
@@ -120,7 +132,7 @@ Based on conversation, update:
    git commit -m "[Clear description of what changed]"
    git push origin main
    ```
-3. Confirm to user: "All synced."
+3. Confirm: "All synced."
 
 **This MUST happen at the end of every session without exception.**
 

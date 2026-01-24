@@ -102,6 +102,13 @@
       "created": "2026-01-24",
       "status": "completed",
       "completed": "2026-01-24"
+    },
+    {
+      "id": "task_015",
+      "domain": "Work",
+      "content": "Set up Substack RSS monitor: provide list of Substack names and high-priority keywords for daily digest",
+      "created": "2026-01-24",
+      "status": "open"
     }
   ]
 }

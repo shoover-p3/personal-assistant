@@ -1,0 +1,35 @@
+{
+  "agent_id": "research_ckd_treatment",
+  "name": "CKD Treatment Research Monitor",
+  "created": "2026-01-24",
+  "status": "active",
+  "schedule": {
+    "frequency_days": 3,
+    "last_run": "2026-01-24",
+    "next_run": "2026-01-27"
+  },
+  "topics": [
+    "chronic kidney disease treatment",
+    "CKD drug research",
+    "CKD clinical trials",
+    "CKD behavior protocols",
+    "kidney disease management"
+  ],
+  "filters": {
+    "avoid_ai_generated": true,
+    "prefer": [
+      "clinical trials",
+      "peer-reviewed research",
+      "medical journals",
+      "FDA approvals",
+      "treatment protocols"
+    ],
+    "exclude": [
+      "blog posts",
+      "promotional content",
+      "AI-generated summaries"
+    ]
+  },
+  "mandate_file": "data/research-agents/research_ckd_treatment/mandate.md",
+  "findings_file": "data/research-agents/research_ckd_treatment/findings.md"
+}

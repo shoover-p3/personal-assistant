@@ -55,6 +55,13 @@
       "domain": null,
       "content": "Add to buddy birthday. Bombas",
       "processed": true
+    },
+    {
+      "timestamp": "2026-01-24T15:53:32.266Z",
+      "type": "raw",
+      "domain": null,
+      "content": "Personal: book hotel for Iowa city",
+      "processed": false
     }
   ]
 }

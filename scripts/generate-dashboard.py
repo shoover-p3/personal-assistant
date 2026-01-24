@@ -141,23 +141,75 @@ def generate_daily_brief(tasks, projects, captures):
     return " ".join(insights)
 
 
+def calculate_task_importance(task):
+    """Calculate importance score based on task content and attributes"""
+    content = task.get('content', '').lower()
+    score = 0
+
+    # High priority indicators (health, medical, financial obligations)
+    if any(word in content for word in ['doctor', 'appointment', 'medical', 'health', 'therapy', 'pt ', 'biopsy', 'specialist']):
+        score += 100
+
+    if any(word in content for word in ['submit', 'payment', 'invoice', 'tax', 'brokerage', 'statement']):
+        score += 90
+
+    # Communication tasks waiting on user action
+    if any(word in content for word in ['send', 'email', 'draft', 'respond', 'reply', 'call']):
+        score += 70
+
+    # Urgent/important keywords
+    if any(word in content for word in ['urgent', 'important', 'critical', 'asap', 'deadline']):
+        score += 80
+
+    # Preparation and meetings
+    if any(word in content for word in ['prepare', 'meeting', 'presentation']):
+        score += 60
+
+    # Research and analysis (important but less time-sensitive)
+    if any(word in content for word in ['research', 'review', 'analyze', 'read', 'study']):
+        score += 40
+
+    # Setup and configuration
+    if any(word in content for word in ['setup', 'set up', 'configure', 'install']):
+        score += 50
+
+    # Purchase tasks (moderate importance)
+    if any(word in content for word in ['purchase', 'buy', 'order']):
+        score += 30
+
+    # Tasks with URLs or specific references (more actionable)
+    if 'http' in content or '@' in content:
+        score += 20
+
+    # Longer, more detailed tasks might be more complex/important
+    if len(content) > 100:
+        score += 10
+
+    # Specific people mentioned (indicates coordination needed)
+    if any(name[0].isupper() for name in content.split() if len(name) > 1):
+        score += 15
+
+    return score
+
+
 def sort_tasks_intelligently(tasks):
-    """Sort tasks by priority: due dates first, then project-linked, then others"""
+    """Sort tasks by priority: due dates first, then by importance"""
     def task_sort_key(task):
         # Priority 1: Tasks with due dates (earliest first)
         if task.get('due'):
             days_left = days_until(task['due'])
             if days_left is not None:
                 # Overdue tasks get highest priority (negative numbers = earlier)
-                return (0, days_left)
+                return (0, days_left, 0)
 
         # Priority 2: Tasks linked to projects
         if task.get('project_id'):
-            return (1, 0)
+            importance = calculate_task_importance(task)
+            return (1, -importance, 0)
 
-        # Priority 3: Everything else (maintain original order via creation date)
-        created = task.get('created', '9999-12-31')
-        return (2, created)
+        # Priority 3: Everything else sorted by calculated importance
+        importance = calculate_task_importance(task)
+        return (2, -importance, task.get('created', '9999-12-31'))
 
     return sorted(tasks, key=task_sort_key)
 

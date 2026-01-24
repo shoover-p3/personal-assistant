@@ -19,6 +19,11 @@
       "date": "2026-01-23",
       "domain": "Personal",
       "content": "Slack bot started working (issue resolved overnight). Enhanced bot to accept unstructured messages - can now send any text and it captures as 'raw' type for review during check-in"
+    },
+    {
+      "date": "2026-01-24",
+      "domain": "Work",
+      "content": "Built mobile dashboard for personal assistant using GitHub Actions + Cloudflare Pages. Key decisions: (1) GitHub Actions instead of local Python since no local Python install, (2) Intelligent task sorting by content analysis (health/medical highest priority, then financial/communication, then research/setup, then purchases), (3) Cloudflare Pages over GitHub Pages for better global CDN performance. Dashboard auto-updates within 60 seconds of any git push. URL: https://personal-assistant-dashboard.pages.dev/"
     }
   ]
 }

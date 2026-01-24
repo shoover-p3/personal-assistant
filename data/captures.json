@@ -19,42 +19,42 @@
       "type": "raw",
       "domain": null,
       "content": "Personal to do therapy\n<https://chatgpt.com/s/t_69740b49b9f081919af7e6c3563a63e9|https://chatgpt.com/s/t_69740b49b9f081919af7e6c3563a63e9>",
-      "processed": false
+      "processed": true
     },
     {
       "timestamp": "2026-01-24T04:31:55.991Z",
       "type": "raw",
       "domain": null,
       "content": "Work to do. Tell Ethan about my conversation with Daniel Himmelfarb",
-      "processed": false
+      "processed": true
     },
     {
       "timestamp": "2026-01-24T04:35:25.800Z",
       "type": "raw",
       "domain": null,
       "content": "Work to do. Submit brokerage statements",
-      "processed": false
+      "processed": true
     },
     {
       "timestamp": "2026-01-24T04:37:06.312Z",
       "type": "raw",
       "domain": null,
       "content": "Personal. Apple Watch and white ceramic oura ring for Buddy birthday. Need cake and decorations.  Attach to current note",
-      "processed": false
+      "processed": true
     },
     {
       "timestamp": "2026-01-24T04:45:31.423Z",
       "type": "raw",
       "domain": null,
       "content": "Personal. Create personal assistant mandate prompt.",
-      "processed": false
+      "processed": true
     },
     {
       "timestamp": "2026-01-24T09:23:47.462Z",
       "type": "raw",
       "domain": null,
       "content": "Add to buddy birthday. Bombas",
-      "processed": false
+      "processed": true
     }
   ]
 }

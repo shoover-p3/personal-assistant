@@ -13,17 +13,23 @@ This system helps:
 ## How to Use
 
 Open Claude Code in this directory and:
-- Say "check-in" for daily interaction
+- Say "check in" for daily interaction
 - Say "weekly review" for end-of-week reflection
-- Say "gratitude" for gratitude practice
-- Say "show summary" to see current state
+- Send captures to Slack bot for quick thought capture
 
-## Structure
+## Documentation Structure
 
-- `system-prompt.md` - Instructions for Claude on how to behave
+**3-Tier System:**
+- `CLAUDE.md` - Daily constitution (what Claude reads every session)
+- `QUICK-REFERENCE.md` - Common operations guide for frequent workflows
+- `docs/personal-assistant-mandate.md` - Comprehensive 40+ page reference
+
+## File Structure
+
 - `workflows/` - Templates for different types of interactions
-- `data/` - Your domains, projects, tasks, and outcomes
+- `data/` - Your domains, projects, tasks, outcomes, and agents
 - `context/` - Current focus and open questions
+- `docs/` - Documentation and research notes
 
 ## Multi-Computer Usage
 

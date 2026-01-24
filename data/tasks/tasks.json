@@ -66,6 +66,41 @@
       "content": "Read Flow Trade System current documentation (printed PDFs)",
       "created": "2026-01-23",
       "status": "open"
+    },
+    {
+      "id": "task_010",
+      "domain": "Personal",
+      "content": "Therapy - https://chatgpt.com/s/t_69740b49b9f081919af7e6c3563a63e9",
+      "created": "2026-01-24",
+      "status": "open"
+    },
+    {
+      "id": "task_011",
+      "domain": "Work",
+      "content": "Tell Ethan about conversation with Daniel Himmelfarb",
+      "created": "2026-01-24",
+      "status": "open"
+    },
+    {
+      "id": "task_012",
+      "domain": "Work",
+      "content": "Submit brokerage statements",
+      "created": "2026-01-24",
+      "status": "open"
+    },
+    {
+      "id": "task_013",
+      "domain": "Personal",
+      "content": "Buddy birthday: Apple Watch, white ceramic oura ring, cake, decorations, Bombas",
+      "created": "2026-01-24",
+      "status": "open"
+    },
+    {
+      "id": "task_014",
+      "domain": "Personal",
+      "content": "Create personal assistant mandate prompt",
+      "created": "2026-01-24",
+      "status": "open"
     }
   ]
 }

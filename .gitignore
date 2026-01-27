@@ -1,6 +1,10 @@
 # Claude Code local settings
 .claude/
 
+# Credentials and secrets
+credentials/
+*.token.json
+
 # OS generated files
 .DS_Store
 Thumbs.db

@@ -58,7 +58,8 @@
       "content": "Check KOLD ETF",
       "created": "2026-01-23",
       "due": "2026-01-27",
-      "status": "open"
+      "status": "completed",
+      "completed": "2026-01-26"
     },
     {
       "id": "task_009",
@@ -86,7 +87,8 @@
       "domain": "Work",
       "content": "Submit brokerage statements",
       "created": "2026-01-24",
-      "status": "open"
+      "status": "completed",
+      "completed": "2026-01-26"
     },
     {
       "id": "task_013",
@@ -127,7 +129,7 @@
     {
       "id": "task_018",
       "domain": "Work",
-      "content": "Purchase Logitech Zone Vibe 100 headset ($100-150) - https://www.amazon.com/Logitech-Lightweight-Headphones-Microphone-Multipoint/dp/B09NBVS84T or Best Buy",
+      "content": "Purchase Jabra Evolve2 65 headset ($150-200) - Professional grade with excellent mic quality and build. Alternative: Poly Voyager 4320 - https://www.amazon.com/dp/B08KRXG7XF or Jabra.com",
       "created": "2026-01-24",
       "status": "open"
     },
@@ -138,6 +140,21 @@
       "created": "2026-01-24",
       "status": "completed",
       "completed": "2026-01-24"
+    },
+    {
+      "id": "task_020",
+      "domain": "Personal",
+      "content": "Book hotel for Iowa City",
+      "created": "2026-01-26",
+      "status": "open"
+    },
+    {
+      "id": "task_021",
+      "domain": "Work",
+      "content": "Set up Gmail API automation for research findings emails (HTML format, auto-send to shane.b.hoover@gmail.com and buddyjbush@gmail.com)",
+      "created": "2026-01-26",
+      "status": "completed",
+      "completed": "2026-01-26"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "id": "work-flow-trade-system",
   "domain": "Work",
-  "title": "Flow Trade Trend Following & Month End Trading System",
-  "purpose": "Design a systematic trading approach combining flow-driven trend following with month-end effects",
+  "title": "UST Satellite System",
+  "purpose": "Design a systematic UST trading approach to complement the Flow Strategy, combining trend following with month-end effects",
   "status": "active",
   "created": "2026-01-20",
   "actions": [

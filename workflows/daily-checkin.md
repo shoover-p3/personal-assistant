@@ -38,10 +38,16 @@ This workflow guides the daily conversation with the user.
 **Due in Next 5 Days:**
 - [List tasks with approaching due dates]
 
-**Open Tasks by Domain:**
-- **Work:** [count] tasks
-- **Personal:** [count] tasks
-- **Personal Growth:** [count] tasks
+**All Open Tasks by Domain:**
+
+**Work:**
+- [List all open work tasks]
+
+**Personal:**
+- [List all open personal tasks]
+
+**Personal Growth:**
+- [List all open personal growth tasks]
 
 ### Slack Captures
 **Unprocessed:** [N] captures

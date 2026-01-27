@@ -1,13 +1,13 @@
 {
   "id": "work-jira-replacement",
   "domain": "Work",
-  "title": "Jira Replacement - Custom PM Tool",
+  "title": "Phase3 Project Whiteboard",
   "purpose": "Build a light project management system for Phase 3 using Claude Code, inspired by Trello, to replace Jira",
   "status": "waiting",
   "created": "2026-01-20",
   "actions": [
-    "Wait for Han to host",
-    "Additional work after Han hosts (TBD)"
+    "Wait for Ethan to review",
+    "Additional work after Ethan reviews (TBD)"
   ],
   "outcomes": [
     {
@@ -21,7 +21,12 @@
     {
       "date": "2026-01-22",
       "content": "Handed off to Han for hosting"
+    },
+    {
+      "date": "2026-01-27",
+      "content": "Han completed hosting setup"
     }
   ],
-  "notes": "Waiting on Han to host. Further work TBD after hosting complete."
+  "notes": "Hosted by Han. Now waiting on Ethan to review. Further work TBD after review.",
+  "last_updated": "2026-01-27"
 }

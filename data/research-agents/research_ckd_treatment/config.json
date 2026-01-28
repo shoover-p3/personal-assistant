@@ -4,9 +4,9 @@
   "created": "2026-01-24",
   "status": "active",
   "schedule": {
-    "frequency_days": 3,
-    "last_run": "2026-01-24",
-    "next_run": "2026-01-27"
+    "frequency_days": 5,
+    "last_run": "2026-01-28",
+    "next_run": "2026-02-02"
   },
   "topics": [
     "chronic kidney disease treatment",
